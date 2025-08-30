@@ -1,0 +1,30 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data and large files
+data/
+*.csv
+*.json
+*.npy
+
+# Model checkpoints
+ckpt/
+models/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Logs
+logs/
+*.log
+
+# IDE and OS files
+.idea/
+.vscode/
+*.DS_Store
