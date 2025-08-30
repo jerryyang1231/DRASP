@@ -1,1 +1,1 @@
-# DRASP
+# [APSIPA'25] DRASP: A Dual-Resolution Attentive Statistics Pooling Framework for Automatic MOS Prediction
