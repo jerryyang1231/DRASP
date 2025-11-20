@@ -235,13 +235,7 @@ class AesMultiOutput(
                 # 在 loop 中知道 name，假設有個 mapping:
                 head_idx = self.axes_name.index(name)  # CE→0, CU→1, PC→2, PQ→3
 
-                # 選擇 pooling
-                if isinstance(self.pooling, (PerHeadFusionPooling, PerHeadFusionStatsPooling)):
-                    # 這兩個 class 需要額外傳 head_idx
-                    audio_embed = self.pooling(audio_embed, embed_mask, head_idx)
-                else:
-                    # 其他 pooling 只要 x, mask
-                    audio_embed = self.pooling(audio_embed, embed_mask)
+                audio_embed = self.pooling(audio_embed, embed_mask)
                 audio_embed = self.pooling_proj(audio_embed)
 
                 # 6. Embedding 正規化（若需要）
